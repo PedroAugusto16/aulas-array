@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos das Palavras</title>
+</head>
+<style>
+
+    body{
+        background-color: rgb(30, 30, 30);
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    h1{
+        color: rgb(51, 200, 86);
+        border: 20px black;
+        font-size: 60px;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .quadro{
+        width: 250px;
+        height: 380px;
+        background-color: rgb(30, 30, 30);
+        border: 3px solid rgb(51, 200, 86);
+        border-radius: 2%;
+    }
+</style>
+<body>
+    
+    
+    <h1>PALAVRAS</h1>
+
+    <input type="text" id="pl">
+
+    <button onclick="palavras()">buscar</button>
+
+    <br>
+    <br>
+
+    <div class="container"> 
+        <div class="quadro">
+
+        </div>
+    </div>
+
+    <script>
+        function palavras(){
+
+            var pl = document.getElementById('pl').value
+            var palavra = ['carro', 'bola', 'livro', 'folha', 'celular', 'garrafa',
+                                 'mouse', 'ventilador','fone', 'mochila' ]
+             var resultado = ""
+             var controle = false
+
+             if( pl == ""|| pl == ""){
+                document.body.innerHTML += ""
+             }
+
+             else{
+                // var p = pl.toLowerCase()
+                for(i=0; i<pl.length; i++){
+                    if(pl = palavra[i]){
+                        controle = true
+                        alert('acertou')
+                    }
+                }
+
+             }
+
+             if(pl == pl){
+                alert("errado")
+             }
+        }
+    </script>
+
+</body>
+</html>

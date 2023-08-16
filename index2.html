@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+ <style>
+
+    body{
+        background-color: rgb(30, 30, 30);
+        text-align: center;
+    }
+
+    h1{
+        color: white;
+        font-size: 50px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    p{
+        color: white;
+        font-size: 23px;
+    }
+    
+    
+ </style>
+<body>
+
+    <h1>JOGADORES DO CORINTHIANS</h1>
+
+
+    <div id="container">
+        <div id="flex">
+          <button onclick="jogadores(); imagens()">Carregar</button>
+        </div>
+    </div>
+
+
+    <script>
+
+        function jogadores(){
+            var atletas = ['Reinato Augusto 👑', 'Yuri Alberto 🐟', 'Matias Rojas 🪄', 'Fagner 🐶', 'Cassio 🧱',
+            'Ruan Oliveira ✂️', 'Fabio Santos 👨‍🦲', 'Wesley 📏', 'Moscardo ⚽', 'Fausto Vera 🧤'];
+            var resultado = "";
+
+            for(i=0; i<atletas.length; i++){
+                resultado += atletas[i] + "<br>"
+            }
+
+            document.body.innerHTML += "<p>" + resultado + "</p>" 
+            }
+
+    </script>
+    
+</body>
+</html>

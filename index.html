@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco De Dados</title>
+
+    <style>
+
+        body{
+            background-color: rgb(30, 30, 30);
+            color: white;
+        }
+
+        #container{
+            display: flex;
+            justify-content: center;
+        }                        
+
+        #flex{
+            text-align: center;
+            color: white;
+            font-size: 25px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+       <div id="flex">
+
+        <br><br><br><br><br><br>
+
+       <label for="">Usuario</label><br>
+       <input type="text" id="usuario"><br>
+
+       <br>
+
+       <label for="">Senha</label><br>
+       <input type="text" id="senha"><br>
+ 
+       <br>
+
+      <button onclick="login()">Entrar</button><br>
+
+     </div>
+    </div>
+
+    <script>
+
+      function login(){
+        var user = document.getElementById("usuario").value
+        var senha = document.getElementById("senha").value
+        var controle = false
+
+        var usuarios = ["pedro", "gustavo", "lucas"]
+        var senhas = ["123456", "gustavo123", "frango"]
+
+        if( user == "" || senha == ""){
+            alert ("Usuario ou Senha em branco")
+        }
+
+        else{
+            var usuario = user.toLowerCase()
+            for(i=0; i< usuarios.length; i++){
+                if(usuario == usuarios[i]&& senha == senhas [i]){
+                    controle = true
+                    alert ("entrou")
+                } 
+
+            }
+            }if(controle == false){
+            alert("Usuario ou Senha incorretos")
+
+        }
+
+      }
+
+    </script>
+</body>
+</html>
